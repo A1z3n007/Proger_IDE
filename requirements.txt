@@ -1,0 +1,6 @@
+PyQt5
+QScintilla
+qtconsole
+jupyter_client
+ipykernel
+matplotlib
