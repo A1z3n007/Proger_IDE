@@ -18,7 +18,6 @@ except ImportError:
     print("Ошибка: qtconsole не найден. Установите его: pip install -r requirements.txt")
     sys.exit(1)
 
-# --- Иконки для файлов ---
 class LanguageIconProvider(QFileIconProvider):
     def __init__(self):
         super().__init__()
@@ -242,7 +241,6 @@ class PluginManagerDialog(QDialog):
         except Exception as e:
             QMessageBox.critical(self, "Ошибка", f"Не удалось удалить плагин: {e}")
 
-# --- Главное Окно ---
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__(); self.settings = QSettings('ProgerIDE', 'Editor')
@@ -473,4 +471,5 @@ class MainWindow(QMainWindow):
 if __name__ == '__main__':
     app = QApplication(sys.argv);
     window = MainWindow();
+
     sys.exit(app.exec_())
